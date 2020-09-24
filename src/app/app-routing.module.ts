@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'counter',
+    loadChildren: () => import('./counter/counter.module').then( m => m.CounterPageModule)
+  },
+  {
+    path: 'background-changer',
+    loadChildren: () => import('./background-changer/background-changer.module').then( m => m.BackgroundChangerPageModule)
+  },
 ];
 
 @NgModule({

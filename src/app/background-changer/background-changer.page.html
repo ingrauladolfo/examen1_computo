@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>background-changer</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="content {{storedTheme}}" role="main">
+        <div class="theme-options">
+            <div id="theme-white" [ngClass]="(storedTheme == 'theme-white') ? 'active': ''" (click)="setTheme('theme-white')">
+            </div>
+            <div id="theme-blue" [ngClass]="(storedTheme == 'theme-blue') ? 'active': ''" (click)="setTheme('theme-blue')">
+
+            </div>
+            <div id="theme-orange" [ngClass]="(storedTheme == 'theme-orange') ? 'active': ''" (click)="setTheme('theme-orange')"></div>
+            <div id="theme-purple" [ngClass]="(storedTheme == 'theme-purple') ? 'active': ''" (click)="setTheme('theme-purple')"></div>
+            <div id="theme-green" [ngClass]="(storedTheme == 'theme-green') ? 'active': ''" (click)="setTheme('theme-green')"></div>
+            <div id="theme-black" [ngClass]="(storedTheme == 'theme-black') ? 'active': ''" (click)="setTheme('theme-black')"></div>
+        </div>
+        <table class="table" border="1">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-button color="primary" routerLink="/">Regresar</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
